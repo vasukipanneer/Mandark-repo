@@ -1,0 +1,21 @@
+<script>
+function result(N)
+{
+  for (let num = 0; num < N; num++)
+    {
+      if (num % 3 == 0 || num % 5 == 0){                     
+      document.write( num+ " ");}
+      else if (num % 3 == 0){
+        document.write(num+ " ");}
+      else if (num % 5 == 0){
+        document.write(num+ " ");}
+      else if (num % 5 == 0 && num % 3 == 0){
+        document.write(num+ " ");}  
+
+    }
+}
+
+let N = 10;
+result(N);
+</script>
+ 
