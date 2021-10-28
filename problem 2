@@ -1,0 +1,26 @@
+<script>
+const M = 2;
+	const N = 2;
+	function reverseMatrix(arr) {
+		
+		for (i = 0; i < M; i++) {
+			var start = 0;
+			var end = N - 1;
+			while (start < end) {
+
+				
+				var temp = arr[i][start];
+				arr[i][start] = arr[i][end];
+				arr[i][end] = temp;
+				start++;
+				end--;
+			}
+		}
+		for (i = 0; i < M; i++) {
+			for (j = 0; j < N; j++) {
+				document.write(arr[i][j] + " ");
+			}
+			document.write("<br/>");
+		}
+	}
+	</script>
