@@ -1,0 +1,42 @@
+<script>
+const num = 25517085204;
+const int32ToIp = (num) => {
+   return (num >>> 24 & 0xFF) + '.' +
+   (num >>> 16 & 0xFF) + '.' +
+   (num >>> 8 & 0xFF) + '.' +
+   (num & 0xFF);
+};
+document.write("A ="+int32ToIp(num)+"<br>")
+const num2 = 24002551;
+const int32ToIp2 = (num2) => {
+   return (num2 >>> 24 & 0xFF) + '.' +
+   (num2 >>> 16 & 0xFF) + '.' +
+   (num2 >>> 8 & 0xFF) + '.' +
+   (num2 & 0xFF);
+};
+document.write("B="+int32ToIp(num)+"<br>")
+const num3 = 13685160168;
+const int32ToIp3 = (num3) => {
+   return (num3 >>> 24 & 0xFF) + '.' +
+   (num3 >>> 16 & 0xFF) + '.' +
+   (num3 >>> 8 & 0xFF) + '.' +
+   (num3 & 0xFF);
+};
+document.write("C="+int32ToIp3(num3)+"<br>")
+const num4 = 192255255255;
+const int32ToIp4 = (num4) => {
+   return (num4 >>> 24 & 0xFF) + '.' +
+   (num4 >>> 16 & 0xFF) + '.' +
+   (num4 >>> 8 & 0xFF) + '.' +
+   (num4 & 0xFF);
+};
+document.write("D="+int32ToIp4(num4)+"<br>")
+  const num5 = 2241700255;
+const int32ToIp5 = (num5) => {
+   return (num5 >>> 24 & 0xFF) + '.' +
+   (num5 >>> 16 & 0xFF) + '.' +
+   (num5 >>> 8 & 0xFF) + '.' +
+   (num5 & 0xFF);
+};
+document.write("E="+int32ToIp5(num5)+"<br>")
+</script>
