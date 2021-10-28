@@ -23,4 +23,8 @@ const M = 2;
 			document.write("<br/>");
 		}
 	}
-	</script>
+	
+		var arr = [ [ 1, 2 ],
+		[ 3, 4 ]];
+		reverseMatrix(arr);
+         </script>
