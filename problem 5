@@ -1,0 +1,67 @@
+<script>
+function  minEdgeBFS(edges,u,v,n)
+{
+        let visited = [];
+          
+        for (let i = 0; i < n; i++) {
+            visited.push(false);
+        }
+       
+        let distance = [];
+          
+        for (let i = 0; i < n; i++) {
+            distance.push(0);
+        }
+       
+        let Q = [];
+        distance[u] = 0;
+       
+        Q.push(u);
+        visited[u] = true;
+        while (Q.length!=0)
+        {
+            let x = Q.shift();
+             
+       
+            for (let i=0; i<edges[x].length; i++)
+            {
+                if (visited[edges[x][i]])
+                    continue;
+                distance[edges[x][i]] = distance[x] + 1;
+                Q.push(edges[x][i]);
+                visited[edges[x][i]]= true;
+            }
+        }
+        return distance[v];
+}
+function addEdge(edges,u,v)
+{
+    edges[u].push(v);
+       edges[v].push(u);
+}
+let n = 11;
+let edges = new Array(11);
+ 
+for (let i = 0; i < edges.length; i++) {
+    edges[i] = [];
+}
+ 
+addEdge(edges, 0, 0);
+addEdge(edges, 0, 1);
+addEdge(edges, 0, 2);
+addEdge(edges, 0, 3);
+addEdge(edges, 0, 4);
+addEdge(edges, 1, 4);
+addEdge(edges, 2, 4);
+addEdge(edges, 3, 4);
+addEdge(edges, 3, 5);
+addEdge(edges, 4, 5);
+addEdge(edges, 5, 6);
+addEdge(edges, 6, 7);
+addEdge(edges, 7, 8);
+addEdge(edges, 8, 9);
+addEdge(edges, 9, 10);
+let u = 0;
+let v = 9;
+document.write(minEdgeBFS(edges, u, v, n));
+</script>
